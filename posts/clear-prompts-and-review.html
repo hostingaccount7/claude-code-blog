@@ -1,0 +1,40 @@
+<p>
+  Getting good results from Claude Code often comes down to two habits: <strong>writing clear prompts</strong> and
+  <strong>reviewing every change</strong>. This post gives simple rules you can follow every time.
+</p>
+
+<h2>Write clear prompts</h2>
+
+<h3>Be specific about the outcome</h3>
+<p>Instead of “fix my code,” say what should happen after the fix:</p>
+<pre><code>When I click Submit, the form should show “Thank you” and clear the fields.
+Currently it does nothing. Fix only the submit handler.
+</code></pre>
+
+<h3>Give context in one line</h3>
+<p>One sentence helps a lot: language, framework, or where the problem is.</p>
+<pre><code>This is a React form. The state is in App.js. The button is in Form.js.
+</code></pre>
+
+<h3>Ask for one thing at a time</h3>
+<p>One request per message keeps changes small and easy to check. Break big tasks into steps.</p>
+
+<h2>Review every change</h2>
+
+<ul>
+  <li><strong>Read the diff:</strong> Skim what was added, removed, or changed before you accept.</li>
+  <li><strong>Run the app:</strong> After each change, run or refresh and test the behavior you asked for.</li>
+  <li><strong>Revert if unsure:</strong> If something looks wrong, undo and ask again with a clearer prompt.</li>
+</ul>
+
+<h2>Quick checklist</h2>
+<ol>
+  <li>Did I say what “done” looks like?</li>
+  <li>Did I give one small task, or many?</li>
+  <li>Did I read the changes before accepting?</li>
+  <li>Did I run the code to verify?</li>
+</ol>
+
+<p class="muted">
+  Pair this with the <a href="./post.html?post=claude-code-cli-materials">Free materials</a> post for prompt templates and a review checklist.
+</p>

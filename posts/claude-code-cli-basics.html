@@ -1,0 +1,75 @@
+<p>
+  This post explains a simple, beginner-friendly way to use Claude Code from the terminal (CLI). The exact commands can
+  vary by version and operating system, so treat the examples as a pattern: learn how to discover what your install
+  supports, then build a safe workflow.
+</p>
+
+<h2>1) Install and verify</h2>
+<p>After you install Claude Code, verify the CLI is available and see what it can do:</p>
+
+<pre><code>claude --help
+claude --version
+</code></pre>
+
+<p>
+  If your command is different (for example, installed via another tool), use the name that works on your system. The
+  goal is to learn the habit: <strong>always check <code>--help</code> first</strong>.
+</p>
+
+<h2>2) Start inside a project folder</h2>
+<p>
+  Create a folder for a small practice project. Keeping each project separate makes it easier to share and safer to
+  review.
+</p>
+
+<pre><code>mkdir my-project
+cd my-project
+</code></pre>
+
+<h2>3) A safe “first session” pattern</h2>
+<p>
+  When you start, tell the tool what you want, your constraints, and how to verify results. Example request (adapt it
+  to your CLI flow):
+</p>
+
+<pre><code>Goal: build a simple static blog site (HTML/CSS/JS).
+Constraints:
+- keep it offline-friendly
+- no paid services
+- explain each change briefly
+Verification:
+- pages load without errors
+- links work
+</code></pre>
+
+<h2>4) Always ask for a plan before big changes</h2>
+<p>
+  A good habit: ask for a short plan first, then do work step-by-step. This prevents surprise changes and helps you
+  learn faster.
+</p>
+
+<h2>5) “Show me the diff” mindset</h2>
+<p>
+  If you’re using Claude Code to modify files, get comfortable checking what changed. In any workflow (Git or not), the
+  key skill is: <strong>review changes before you trust them</strong>.
+</p>
+
+<ul>
+  <li>Read the updated file(s) after changes</li>
+  <li>Run the project (or a small test) to confirm</li>
+  <li>Keep changes small and reversible</li>
+</ul>
+
+<h2>6) Common beginner mistakes</h2>
+<ul>
+  <li><strong>Too much at once:</strong> ask for small, focused edits instead of “build everything”.</li>
+  <li><strong>Unclear success:</strong> always define “done” (what should work after the change).</li>
+  <li><strong>Copy without understanding:</strong> ask the tool to explain one section at a time.</li>
+</ul>
+
+<h2>Next steps</h2>
+<p>
+  Continue with <a href="./post.html?post=claude-code-cli-materials">Free materials</a> for prompt templates, a review
+  checklist, and practice tasks you can reuse.
+</p>
+

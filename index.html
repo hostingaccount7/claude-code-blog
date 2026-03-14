@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Free Claude Code learning materials and practical guides for students worldwide."
+    />
+    <title>Claude Code Free Materials Blog</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="./index.html" aria-label="Home">
+          <span class="brand-mark" aria-hidden="true">CC</span>
+          <span class="brand-text">
+            <span class="brand-title">Claude Code</span>
+            <span class="brand-subtitle">Free Materials Blog</span>
+          </span>
+        </a>
+
+        <nav class="nav" aria-label="Primary">
+          <a href="#posts">Posts</a>
+          <a href="#mission">Mission</a>
+          <a href="#disclaimer">Disclaimer</a>
+          <a href="https://github.com/hostingaccount7/claude-code-blog" target="_blank" rel="noopener noreferrer">Source code</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero">
+        <div class="container hero-inner">
+          <div class="hero-copy">
+            <h1>Free Claude Code materials for students—everywhere.</h1>
+            <p class="lead">
+              Practical notes, workflows, and templates to help learners in under‑developed and developing nations
+              access modern tooling without paywalls.
+            </p>
+            <div class="hero-actions">
+              <a class="btn primary" href="#posts">Browse posts</a>
+              <a class="btn" href="./post.html?post=claude-code-cli-basics">Start with CLI basics</a>
+            </div>
+
+            <div class="notice" role="note" aria-label="Quick note">
+              <strong>Goal:</strong> share free, legal, beginner-friendly learning resources and examples.
+            </div>
+          </div>
+
+          <div class="hero-card" aria-hidden="true">
+            <div class="hero-card-top">
+              <div class="dot red"></div>
+              <div class="dot yellow"></div>
+              <div class="dot green"></div>
+            </div>
+            <div class="hero-visual">
+              <img src="./assets/hero-galaxy.svg" alt="Galaxy illustration with stars and planets" loading="eager" />
+            </div>
+            <pre class="hero-code"><code>$ claude --help
+$ claude --version
+
+- learn safely
+- keep changes small
+- share study packs</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="posts" aria-label="Posts">
+        <div class="container">
+          <div class="section-head">
+            <h2>Latest posts</h2>
+            <div class="search">
+              <label class="sr-only" for="q">Search posts</label>
+              <input id="q" type="search" placeholder="Search by title, tag, or keyword…" autocomplete="off" />
+            </div>
+          </div>
+
+          <div id="posts-grid" class="grid" aria-live="polite"></div>
+
+          <div class="muted small" id="posts-meta" aria-live="polite"></div>
+        </div>
+      </section>
+
+      <section class="section alt" id="mission" aria-label="Mission">
+        <div class="container">
+          <h2>Mission</h2>
+          <div class="prose">
+            <p>
+              This blog exists to help students who can’t afford expensive courses or subscriptions. Everything here is
+              written to be understandable, reusable, and shareable.
+            </p>
+            <ul>
+              <li><strong>Free and simple:</strong> lightweight static site, easy to host anywhere.</li>
+              <li><strong>Student-first:</strong> short steps, clear examples, practical checklists.</li>
+              <li><strong>Community-friendly:</strong> you can copy posts and adapt them for local study groups.</li>
+              <li><strong>Open source:</strong> <a href="https://github.com/hostingaccount7/claude-code-blog" target="_blank" rel="noopener noreferrer">source code on GitHub</a>.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="disclaimer" aria-label="Disclaimer">
+        <div class="container">
+          <h2>Disclaimer (please read)</h2>
+          <div class="prose disclaimer">
+            <p>
+              <strong>Not affiliated with Anthropic.</strong> This independent website is <strong>not related to</strong>,
+              <strong>not endorsed by</strong>, and <strong>not sponsored by</strong> Anthropic PBC. “Claude” and related
+              names may be trademarks of their respective owners.
+            </p>
+            <p>
+              Content here is for educational purposes. Always follow the official terms of service and local laws. If
+              you believe any content should be corrected or removed, update the post sources in this project.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>
+          <div class="footer-title">Claude Code Free Materials Blog</div>
+        </div>
+        <div class="footer-links">
+          <a href="./index.html#disclaimer">Disclaimer</a>
+          <a href="./post.html?post=welcome">Start here</a>
+          <a href="https://github.com/hostingaccount7/claude-code-blog" target="_blank" rel="noopener noreferrer">Source code (GitHub)</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./app.js" defer></script>
+  </body>
+</html>

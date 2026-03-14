@@ -1,0 +1,42 @@
+[
+  {
+    "slug": "welcome",
+    "title": "Welcome: Free Claude Code materials for everyone",
+    "date": "2026-03-09",
+    "readingTime": "3 min read",
+    "excerpt": "Why this blog exists, what you’ll find here, and how to use these resources responsibly.",
+    "tags": ["start-here", "mission", "students"]
+  },
+  {
+    "slug": "claude-code-cli-basics",
+    "title": "Claude Code CLI basics: install, start, and your first workflow",
+    "date": "2026-03-09",
+    "readingTime": "7 min read",
+    "excerpt": "A beginner guide to running Claude Code from the terminal: setup, starting a session, and safe habits.",
+    "tags": ["cli", "beginner", "setup"]
+  },
+  {
+    "slug": "claude-code-cli-materials",
+    "title": "Free materials: prompts, checklists, and practice tasks for Claude Code CLI",
+    "date": "2026-03-09",
+    "readingTime": "8 min read",
+    "excerpt": "Copy/paste-friendly resources: prompt patterns, review checklist, and small exercises you can do offline.",
+    "tags": ["materials", "prompts", "practice"]
+  },
+  {
+    "slug": "clear-prompts-and-review",
+    "title": "Best practices: clear prompts and reviewing code changes",
+    "date": "2026-03-14",
+    "readingTime": "5 min read",
+    "excerpt": "Simple rules for writing prompts that get good results and for reviewing every change before you accept it.",
+    "tags": ["prompts", "review", "best-practices"]
+  },
+  {
+    "slug": "learning-limited-resources",
+    "title": "Learning with limited resources: slow internet, shared PCs, little time",
+    "date": "2026-03-14",
+    "readingTime": "6 min read",
+    "excerpt": "Practical tips for using Claude Code when bandwidth, hardware, or time are limited—and how to study in groups.",
+    "tags": ["offline", "students", "study-groups"]
+  }
+]

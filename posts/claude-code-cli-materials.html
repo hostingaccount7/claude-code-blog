@@ -1,0 +1,100 @@
+<p>
+  Below are free, copy/paste-friendly materials you can reuse while learning Claude Code CLI. They’re designed for
+  low-bandwidth learning and small study groups.
+</p>
+
+<h2>Prompt templates (copy/paste)</h2>
+
+<h3>Template A: understand a codebase quickly</h3>
+<pre><code>Context: I’m new to this project.
+Task: explain how the app starts and where routing happens.
+Output:
+- 5 bullet summary
+- key files to read (with paths)
+- “try this next” checklist (3 items)
+</code></pre>
+
+<h3>Template B: make a safe change</h3>
+<pre><code>Goal: &lt;what you want&gt;
+Constraints:
+- keep changes minimal
+- don’t add new dependencies unless necessary
+Definition of done:
+- &lt;how to verify&gt;
+Ask: propose a plan, then implement.
+</code></pre>
+
+<h3>Template C: debugging</h3>
+<pre><code>Bug: &lt;what happens&gt;
+Expected: &lt;what should happen&gt;
+Evidence:
+- exact error message
+- steps to reproduce
+Ask:
+- list likely causes (top 3)
+- pick 1 and propose a fix
+</code></pre>
+
+<h3>Filled example (ready to reuse)</h3>
+<pre><code>Goal: Add a search box to filter posts by title and tags.
+Constraints:
+- keep changes minimal
+- no new dependencies
+Definition of done:
+- typing in the search box filters the visible post cards instantly
+- empty search shows all posts again
+Ask: propose a plan, then implement.
+</code></pre>
+
+<h3>Filled debug example (ready to reuse)</h3>
+<pre><code>Bug: Clicking a post shows “Post not found”.
+Expected: The post page loads the content.
+Evidence:
+- URL: /post.html?post=welcome
+- Console shows: “Post not found”
+Ask:
+- list likely causes (top 3)
+- pick 1 and propose a fix
+</code></pre>
+
+<h2>Review checklist (before you accept changes)</h2>
+<ul>
+  <li><strong>Scope:</strong> did it change only what you asked for?</li>
+  <li><strong>Safety:</strong> no secrets added (API keys, passwords, tokens)?</li>
+  <li><strong>Clarity:</strong> do you understand the main changes?</li>
+  <li><strong>Run it:</strong> does it work after the change?</li>
+  <li><strong>Shareable:</strong> can another student read it and learn from it?</li>
+</ul>
+
+<h2>Practice tasks (offline-friendly)</h2>
+<ol>
+  <li>
+    <strong>Documentation exercise:</strong> ask Claude Code to write a short README for a folder, then verify every step
+    works.
+  </li>
+  <li>
+    <strong>Small refactor:</strong> rename a function across files and ensure nothing breaks.
+  </li>
+  <li>
+    <strong>Bug hunt:</strong> intentionally add a tiny bug, then use the debugging template to find it.
+  </li>
+  <li>
+    <strong>UI polish:</strong> improve spacing/contrast on a page while keeping it accessible.
+  </li>
+</ol>
+
+<h2>Related learning materials (free)</h2>
+<p>
+  Pair Claude Code practice with basic foundations:
+</p>
+<ul>
+  <li>Git basics (commits, diffs, branches)</li>
+  <li>Command line basics (folders, files, running scripts)</li>
+  <li>HTML/CSS/JS fundamentals (for web projects)</li>
+  <li>Python fundamentals (for scripting)</li>
+</ul>
+
+<p class="muted">
+  Tip: keep a “study pack” folder you can zip and share offline with your local group.
+</p>
+
