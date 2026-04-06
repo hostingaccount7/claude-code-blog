@@ -1,0 +1,98 @@
+<p>
+  As a student, you'll often need to read code you didn't write—from a classmate, a tutorial, an open-source
+  project, or a template. Claude Code is a powerful reading partner that can explain unfamiliar code line by line.
+</p>
+
+<h2>Why reading code matters</h2>
+<p>
+  Most professional developers spend more time reading code than writing it. If you can understand existing code
+  quickly, you can fix bugs faster, contribute to team projects, and learn from examples instead of starting
+  from scratch every time.
+</p>
+
+<h2>1) Ask for a high-level summary first</h2>
+<p>
+  When you encounter an unfamiliar file or function, start with the big picture before diving into details.
+</p>
+<pre><code>Here is a Python file I received from my instructor.
+I don't understand what it does yet.
+
+[paste the code here]
+
+Give me a 3–5 sentence summary of what this code does overall.
+Don't explain every line yet.</code></pre>
+<p>
+  Once you have the summary, you'll know which parts to focus on and which parts you can skip for now.
+</p>
+
+<h2>2) Ask about one function at a time</h2>
+<p>
+  After you understand the overall structure, pick one function and ask Claude Code to walk you through it.
+</p>
+<pre><code>Now explain just the `calculate_average` function step by step.
+What does each line do? Use simple language.</code></pre>
+<p>
+  Work through the file function by function. Don't try to understand everything at once.
+</p>
+
+<h2>3) Ask "why" questions</h2>
+<p>
+  Understanding what code does is a good start. Understanding <em>why</em> it was written that way builds deeper skill.
+</p>
+<ul>
+  <li>"Why does this function use a loop instead of a simpler approach?"</li>
+  <li>"Why is this value stored in a variable instead of calculated inline?"</li>
+  <li>"Is there a reason this code checks for None here?"</li>
+</ul>
+<p>
+  These questions teach you to think like a developer, not just copy patterns.
+</p>
+
+<h2>4) Predict what the code does, then verify</h2>
+<p>
+  Before asking Claude Code to explain a block, try to predict what it does yourself. Write your guess in a comment,
+  then ask Claude Code if you were right.
+</p>
+<pre><code>I think this block sorts the list in reverse order and removes duplicates.
+Am I correct? If not, what does it actually do?
+
+[paste the block here]</code></pre>
+<p>
+  This technique builds your ability to read code independently over time.
+</p>
+
+<h2>5) Trace a specific input through the code</h2>
+<p>
+  One of the best ways to understand code is to follow one specific value through it from start to finish.
+</p>
+<pre><code>If I call this function with the input [1, 2, 3, 4, 5],
+walk me through exactly what happens at each step.
+What does the variable `total` equal after each loop iteration?</code></pre>
+<p>
+  Tracing values manually—with or without Claude Code—is a skill that will serve you in exams, interviews, and
+  real projects.
+</p>
+
+<h2>6) Look for patterns you can reuse</h2>
+<p>
+  When you finish reading a piece of code, note any patterns that seem useful. Ask Claude Code to name them.
+</p>
+<pre><code>Is this approach of building up a result in a loop a common pattern?
+Does it have a name? When else would I use it?</code></pre>
+<p>
+  Naming patterns helps you recognize them next time you see them—and use them in your own code.
+</p>
+
+<h2>Quick prompts for reading unfamiliar code</h2>
+<ul>
+  <li>"Summarize what this file does in 3–5 sentences."</li>
+  <li>"Explain this function line by line using simple language."</li>
+  <li>"What would happen if I removed this line?"</li>
+  <li>"Is [my guess] correct, or does this code actually do something different?"</li>
+  <li>"What pattern is this, and when would I use it again?"</li>
+</ul>
+
+<p class="muted">
+  Once you can read code confidently, try building something from scratch:
+  <a href="./post.html?post=first-real-project">Your first real project with Claude Code</a>.
+</p>

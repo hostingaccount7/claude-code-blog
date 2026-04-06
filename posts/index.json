@@ -38,5 +38,29 @@
     "readingTime": "6 min read",
     "excerpt": "Practical tips for using Claude Code when bandwidth, hardware, or time are limited—and how to study in groups.",
     "tags": ["offline", "students", "study-groups"]
+  },
+  {
+    "slug": "debug-with-claude-code",
+    "title": "How to debug with Claude Code: understand errors, don't just fix them",
+    "date": "2026-04-06",
+    "readingTime": "5 min read",
+    "excerpt": "Learn to use Claude Code as a debugging partner—paste the error, ask why before asking for a fix, and build real problem-solving skills.",
+    "tags": ["debugging", "beginner", "best-practices"]
+  },
+  {
+    "slug": "first-real-project",
+    "title": "Your first real project with Claude Code: from blank folder to working program",
+    "date": "2026-04-06",
+    "readingTime": "6 min read",
+    "excerpt": "A step-by-step guide to picking, planning, and building your first small project—one piece at a time—using Claude Code.",
+    "tags": ["project", "beginner", "students"]
+  },
+  {
+    "slug": "understand-code-you-didnt-write",
+    "title": "How to understand code you didn't write using Claude Code",
+    "date": "2026-04-06",
+    "readingTime": "5 min read",
+    "excerpt": "Techniques for reading unfamiliar code: ask for summaries, trace inputs, predict behavior, and find patterns you can reuse.",
+    "tags": ["reading-code", "beginner", "study-skills"]
   }
 ]

@@ -1,0 +1,87 @@
+<p>
+  One of the best ways to learn is to build something real—a small project you actually care about. This post
+  walks you through how to use Claude Code to go from a blank folder to a working first project.
+</p>
+
+<h2>Choosing your project</h2>
+<p>
+  Pick something small enough to finish in a few days, but real enough to be useful. Good examples for beginners:
+</p>
+<ul>
+  <li>A to-do list saved to a text file</li>
+  <li>A quiz program that reads questions from a file</li>
+  <li>A simple calculator with a command-line interface</li>
+  <li>A script that renames files in a folder automatically</li>
+</ul>
+<p>
+  Avoid picking something that needs a database, a login system, or an API key on your first try. Keep the scope
+  narrow so you can actually finish it.
+</p>
+
+<h2>Step 1: Start with a plain English description</h2>
+<p>
+  Before writing any code, write one paragraph describing what your project does. Then share it with Claude Code
+  and ask for a plan—not code yet.
+</p>
+<pre><code>I want to build a simple quiz program in Python.
+It reads questions from a text file, asks them one by one,
+and tells me my score at the end.
+
+Give me a plan: what files do I need, what should each one do,
+and what order should I build them in?
+Do not write any code yet.</code></pre>
+<p>
+  Review the plan before proceeding. If something doesn't make sense, ask Claude Code to explain it.
+</p>
+
+<h2>Step 2: Build one piece at a time</h2>
+<p>
+  Once you have a plan, build only the first piece. For the quiz example, start with just reading a file and
+  printing the first question.
+</p>
+<pre><code>Now write only the part that reads questions from a text file
+and prints the first question to the screen. Nothing else yet.</code></pre>
+<p>
+  Run it. Make sure it works. Only then move on to the next piece.
+</p>
+
+<h2>Step 3: Test as you go</h2>
+<ul>
+  <li><strong>Run often:</strong> Run your program after every small change, not only at the end.</li>
+  <li><strong>Use test inputs:</strong> Create a small sample file (3–5 questions) to test with so you're not waiting long.</li>
+  <li><strong>Check edge cases:</strong> What happens if the file is empty? If the user types the wrong thing? Test these early.</li>
+</ul>
+
+<h2>Step 4: Add one feature at a time</h2>
+<p>
+  Once the first piece works, add the next. Ask Claude Code for help with exactly that one feature—don't ask for
+  everything at once.
+</p>
+<pre><code>The file reading works. Now add the part that accepts
+the user's answer and checks if it's correct.
+Show me only the new code and where to add it.</code></pre>
+
+<h2>Step 5: Write a short README</h2>
+<p>
+  When your project is working, write a README file that explains what it does and how to run it. Keep it to
+  10–15 lines. This is a skill you'll use throughout your career.
+</p>
+<pre><code>My project is done. Help me write a short README.md
+that explains what the program does, what Python version it needs,
+and how to run it. Keep it under 15 lines.</code></pre>
+
+<h2>What you'll have learned</h2>
+<p>
+  By finishing even a small project, you'll have practised:
+</p>
+<ul>
+  <li>Breaking a problem into steps</li>
+  <li>Reading and understanding code you didn't write from scratch</li>
+  <li>Testing and fixing bugs as you go</li>
+  <li>Writing prompts that ask for exactly what you need</li>
+</ul>
+
+<p class="muted">
+  When you get stuck on errors during your project, see
+  <a href="./post.html?post=debug-with-claude-code">How to debug with Claude Code</a>.
+</p>

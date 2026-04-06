@@ -1,0 +1,75 @@
+<p>
+  Debugging is one of the most valuable skills you can build as a student developer. Claude Code can help you
+  understand errors, trace bugs, and fix problems step by step—without doing all the thinking for you.
+</p>
+
+<h2>1) Paste the exact error message</h2>
+<p>
+  When something breaks, copy the full error text and share it with Claude Code. Don't paraphrase. The exact
+  wording, file name, and line number matter.
+</p>
+<pre><code>I'm getting this error when I run my Python script:
+
+Traceback (most recent call last):
+  File "main.py", line 14, in &lt;module&gt;
+    result = divide(10, 0)
+ZeroDivisionError: division by zero
+
+What is causing this and how do I fix it?</code></pre>
+<p>
+  Claude Code will explain what the error means and show you exactly where to look—not just give you fixed code.
+  Understanding the cause matters more than the fix.
+</p>
+
+<h2>2) Ask "why" before asking "fix it"</h2>
+<p>
+  Before asking for a fix, ask for an explanation. This forces you to understand the problem, not just copy a
+  solution you don't understand.
+</p>
+<pre><code>Why would a ZeroDivisionError happen in this line?
+Explain it simply as if I'm a beginner.</code></pre>
+<p>
+  Once you understand the cause, ask for the smallest possible fix—and then try to write it yourself first.
+</p>
+
+<h2>3) Read the fix before you accept it</h2>
+<ul>
+  <li><strong>Read every line:</strong> Don't paste changes without reading them. If a line looks unfamiliar, ask what it does.</li>
+  <li><strong>Run and compare:</strong> After a fix, run your program again. Does the error go away? Did anything else break?</li>
+  <li><strong>Test edge cases:</strong> If the fix involves a condition or a loop, test it with unexpected inputs (empty input, zero, a very large number).</li>
+</ul>
+
+<h2>4) Break problems into smaller pieces</h2>
+<p>
+  If your program has multiple errors or a feature that won't work, don't ask Claude Code to fix everything at once.
+  Tackle one error at a time, from top to bottom.
+</p>
+<pre><code>I have three errors. Let's start with just the first one:
+[paste first error here]
+
+Ignore the others for now.</code></pre>
+
+<h2>5) Ask for hints, not answers</h2>
+<p>
+  If you want to build real skills, ask for a hint instead of the full solution. Then try to write the fix yourself.
+</p>
+<pre><code>Don't give me the answer yet. Just give me a hint
+about what I should check or change.</code></pre>
+<p>
+  This approach is slower in the short term but builds understanding that lasts. When you get stuck on a future
+  problem, your brain will already have a model for how to approach it.
+</p>
+
+<h2>Common debugging prompts to bookmark</h2>
+<ul>
+  <li>"Explain this error in simple terms."</li>
+  <li>"What does line [X] do step by step?"</li>
+  <li>"Is there a way this code could fail that I'm not thinking of?"</li>
+  <li>"What should I test after making this change?"</li>
+  <li>"Give me a hint—don't give me the answer yet."</li>
+</ul>
+
+<p class="muted">
+  For tips on writing clear prompts in general, see
+  <a href="./post.html?post=clear-prompts-and-review">Best practices: clear prompts and reviewing code changes</a>.
+</p>
