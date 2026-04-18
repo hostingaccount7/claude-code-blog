@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="Read a post — Claude Code Free Materials Blog" />
     <title>Post • Claude Code Free Materials Blog</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./styles.css" />
-    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MMZSHMHL1R"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -16,6 +18,9 @@
     </script>
   </head>
   <body>
+    <!-- CRT scan-line overlay -->
+    <div class="scanlines" aria-hidden="true"></div>
+
     <a class="skip-link" href="#main">Skip to content</a>
 
     <header class="site-header">
@@ -23,15 +28,15 @@
         <a class="brand" href="./index.html" aria-label="Home">
           <span class="brand-mark" aria-hidden="true">CC</span>
           <span class="brand-text">
-            <span class="brand-title">Claude Code</span>
-            <span class="brand-subtitle">Free Materials Blog</span>
+            <span class="brand-title">CLAUDE_CODE</span>
+            <span class="brand-subtitle">free materials blog</span>
           </span>
         </a>
         <nav class="nav" aria-label="Primary">
-          <a href="./index.html#posts">Posts</a>
-          <a href="./index.html#mission">Mission</a>
-          <a href="./index.html#disclaimer">Disclaimer</a>
-          <a href="https://github.com/hostingaccount7/claude-code-blog" target="_blank" rel="noopener noreferrer">Source code</a>
+          <a href="./index.html">[← all posts]</a>
+          <a href="./index.html#mission">[mission]</a>
+          <a href="./index.html#disclaimer">[disclaimer]</a>
+          <a href="https://github.com/hostingaccount7/claude-code-blog" target="_blank" rel="noopener noreferrer">[source↗]</a>
         </nav>
       </div>
     </header>
@@ -40,40 +45,45 @@
       <div class="container">
         <div class="post-header">
           <div class="crumbs">
-            <a href="./index.html#posts">← Back to posts</a>
-          </div>
-          <div class="post-banner" aria-hidden="true">
-            <img src="./assets/hero-galaxy.svg" alt="" />
+            <a href="./index.html">← all posts</a>
+            <span id="post-category-crumb"></span>
           </div>
           <h1 class="post-title" id="post-title">Loading…</h1>
-          <div class="post-meta" id="post-meta"></div>
         </div>
 
-        <article class="post-content" id="post-content" aria-live="polite"></article>
+        <div class="post-body">
+          <article class="post-content" id="post-content" aria-live="polite"></article>
 
-        <section class="section" aria-label="Disclaimer">
-          <h2>Disclaimer</h2>
-          <div class="prose disclaimer">
-            <p>
-              <strong>Not affiliated with Anthropic.</strong> This independent website is <strong>not related to</strong>,
-              <strong>not endorsed by</strong>, and <strong>not sponsored by</strong> Anthropic PBC. “Claude” and related
-              names may be trademarks of their respective owners.
-            </p>
-          </div>
-        </section>
+          <aside class="post-sidebar">
+            <div class="sidebar-block">
+              <div class="sidebar-label">$ info</div>
+              <div class="post-meta" id="post-meta"></div>
+            </div>
+            <div class="sidebar-block">
+              <div class="sidebar-label">$ nav</div>
+              <nav class="sidebar-nav">
+                <a href="./index.html">← all posts</a>
+                <a href="./index.html#mission">mission</a>
+                <a href="./index.html#disclaimer">disclaimer</a>
+                <a href="https://github.com/hostingaccount7/claude-code-blog" target="_blank" rel="noopener noreferrer">source↗</a>
+              </nav>
+            </div>
+            <div class="sidebar-block sidebar-disclaimer">
+              <div class="sidebar-label">$ note</div>
+              <p>Not affiliated with Anthropic PBC.</p>
+            </div>
+          </aside>
+        </div>
       </div>
     </main>
 
     <footer class="site-footer">
       <div class="container footer-inner">
-        <div>
-          <div class="footer-title">Claude Code Free Materials Blog</div>
-          <div class="muted small">Independent educational resource. Not affiliated with Anthropic.</div>
-        </div>
+        <div class="footer-title">CLAUDE_CODE :: FREE_MATERIALS_BLOG</div>
         <div class="footer-links">
-          <a href="./index.html#disclaimer">Full disclaimer</a>
-          <a href="./index.html#mission">Mission</a>
-          <a href="https://github.com/hostingaccount7/claude-code-blog" target="_blank" rel="noopener noreferrer">Source code (GitHub)</a>
+          <a href="./index.html#disclaimer">disclaimer</a>
+          <a href="./index.html#mission">mission</a>
+          <a href="https://github.com/hostingaccount7/claude-code-blog" target="_blank" rel="noopener noreferrer">github↗</a>
         </div>
       </div>
     </footer>

@@ -4,8 +4,9 @@
     "title": "Welcome: Free Claude Code materials for everyone",
     "date": "2026-03-09",
     "readingTime": "3 min read",
-    "excerpt": "Why this blog exists, what you’ll find here, and how to use these resources responsibly.",
-    "tags": ["start-here", "mission", "students"]
+    "excerpt": "Why this blog exists, what you'll find here, and how to use these resources responsibly.",
+    "tags": ["start-here", "mission", "students"],
+    "category": "start"
   },
   {
     "slug": "claude-code-cli-basics",
@@ -13,7 +14,8 @@
     "date": "2026-03-09",
     "readingTime": "7 min read",
     "excerpt": "A beginner guide to running Claude Code from the terminal: setup, starting a session, and safe habits.",
-    "tags": ["cli", "beginner", "setup"]
+    "tags": ["cli", "beginner", "setup"],
+    "category": "start"
   },
   {
     "slug": "claude-code-cli-materials",
@@ -21,7 +23,8 @@
     "date": "2026-03-09",
     "readingTime": "8 min read",
     "excerpt": "Copy/paste-friendly resources: prompt patterns, review checklist, and small exercises you can do offline.",
-    "tags": ["materials", "prompts", "practice"]
+    "tags": ["materials", "prompts", "practice"],
+    "category": "start"
   },
   {
     "slug": "clear-prompts-and-review",
@@ -29,7 +32,8 @@
     "date": "2026-03-14",
     "readingTime": "5 min read",
     "excerpt": "Simple rules for writing prompts that get good results and for reviewing every change before you accept it.",
-    "tags": ["prompts", "review", "best-practices"]
+    "tags": ["prompts", "review", "best-practices"],
+    "category": "skills"
   },
   {
     "slug": "learning-limited-resources",
@@ -37,7 +41,8 @@
     "date": "2026-03-14",
     "readingTime": "6 min read",
     "excerpt": "Practical tips for using Claude Code when bandwidth, hardware, or time are limited—and how to study in groups.",
-    "tags": ["offline", "students", "study-groups"]
+    "tags": ["offline", "students", "study-groups"],
+    "category": "students"
   },
   {
     "slug": "debug-with-claude-code",
@@ -45,7 +50,8 @@
     "date": "2026-04-06",
     "readingTime": "5 min read",
     "excerpt": "Learn to use Claude Code as a debugging partner—paste the error, ask why before asking for a fix, and build real problem-solving skills.",
-    "tags": ["debugging", "beginner", "best-practices"]
+    "tags": ["debugging", "beginner", "best-practices"],
+    "category": "skills"
   },
   {
     "slug": "first-real-project",
@@ -53,7 +59,8 @@
     "date": "2026-04-06",
     "readingTime": "6 min read",
     "excerpt": "A step-by-step guide to picking, planning, and building your first small project—one piece at a time—using Claude Code.",
-    "tags": ["project", "beginner", "students"]
+    "tags": ["project", "beginner", "students"],
+    "category": "projects"
   },
   {
     "slug": "understand-code-you-didnt-write",
@@ -61,7 +68,8 @@
     "date": "2026-04-06",
     "readingTime": "5 min read",
     "excerpt": "Techniques for reading unfamiliar code: ask for summaries, trace inputs, predict behavior, and find patterns you can reuse.",
-    "tags": ["reading-code", "beginner", "study-skills"]
+    "tags": ["reading-code", "beginner", "study-skills"],
+    "category": "skills"
   },
   {
     "slug": "git-basics-with-claude-code",
@@ -69,7 +77,8 @@
     "date": "2026-04-17",
     "readingTime": "6 min read",
     "excerpt": "The five git commands every Claude Code user needs daily—and a safe commit-after-every-change workflow that makes mistakes easy to undo.",
-    "tags": ["git", "beginner", "workflow"]
+    "tags": ["git", "beginner", "workflow"],
+    "category": "workflow"
   },
   {
     "slug": "reviewing-claude-suggestions",
@@ -77,7 +86,8 @@
     "date": "2026-04-17",
     "readingTime": "5 min read",
     "excerpt": "A two-minute checklist for reading diffs, testing changes by hand, and asking follow-up questions—so you understand every line you keep.",
-    "tags": ["review", "best-practices", "study-skills"]
+    "tags": ["review", "best-practices", "study-skills"],
+    "category": "skills"
   },
   {
     "slug": "python-project-from-scratch",
@@ -85,7 +95,8 @@
     "date": "2026-04-17",
     "readingTime": "7 min read",
     "excerpt": "A step-by-step walkthrough: plan your program, prompt one piece at a time, test by hand, and commit after each working step.",
-    "tags": ["python", "project", "beginner"]
+    "tags": ["python", "project", "beginner"],
+    "category": "projects"
   },
   {
     "slug": "saving-context-tokens",
@@ -93,7 +104,8 @@
     "date": "2026-04-17",
     "readingTime": "6 min read",
     "excerpt": "Practical habits for stretching your context budget: /clear, /compact, scoped file reads, tight prompts, and CLAUDE.md.",
-    "tags": ["context", "workflow", "best-practices"]
+    "tags": ["context", "workflow", "best-practices"],
+    "category": "workflow"
   },
   {
     "slug": "key-claude-code-commands",
@@ -101,6 +113,7 @@
     "date": "2026-04-17",
     "readingTime": "5 min read",
     "excerpt": "A complete reference for slash commands, keyboard shortcuts, CLI flags, and CLAUDE.md—with examples for each.",
-    "tags": ["commands", "reference", "cli"]
+    "tags": ["commands", "reference", "cli"],
+    "category": "workflow"
   }
 ]

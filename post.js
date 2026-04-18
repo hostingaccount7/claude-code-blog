@@ -48,9 +48,9 @@ function renderMeta(post) {
   const tags = (post.tags || []).slice(0, 10).map((t) => `<span class="tag">${escapeHtml(t)}</span>`).join(" ");
   return `
     <span>${escapeHtml(formatDate(post.date))}</span>
-    <span aria-hidden="true">•</span>
     <span>${escapeHtml(post.readingTime || "Quick read")}</span>
-    ${tags ? `<span aria-hidden="true">•</span><span>${tags}</span>` : ""}
+    ${post.category ? `<span>cat: ${escapeHtml(post.category)}</span>` : ""}
+    ${tags ? `<div style="margin-top:6px;display:flex;flex-wrap:wrap;gap:4px;">${tags}</div>` : ""}
   `;
 }
 
