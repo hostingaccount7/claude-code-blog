@@ -95,6 +95,61 @@ async function main() {
   const descMeta = document.querySelector('meta[name="description"]');
   if (descMeta && post.excerpt) descMeta.setAttribute("content", post.excerpt);
 
+  // Canonical URL
+  const canonicalUrl = `https://claudecodefree.com/post.html?post=${encodeURIComponent(slug)}`;
+  let canonical = document.querySelector('link[rel="canonical"]');
+  if (!canonical) {
+    canonical = document.createElement("link");
+    canonical.rel = "canonical";
+    document.head.appendChild(canonical);
+  }
+  canonical.href = canonicalUrl;
+
+  // Open Graph + Twitter Card tags
+  const ogTags = [
+    ["og:type",        "article"],
+    ["og:site_name",   "Claude Code Free Materials Blog"],
+    ["og:title",       post.title],
+    ["og:description", post.excerpt || ""],
+    ["og:url",         canonicalUrl],
+    ["twitter:card",        "summary"],
+    ["twitter:title",       post.title],
+    ["twitter:description", post.excerpt || ""],
+  ];
+  for (const [prop, content] of ogTags) {
+    const attr = prop.startsWith("twitter:") ? "name" : "property";
+    let tag = document.querySelector(`meta[${attr}="${prop}"]`);
+    if (!tag) {
+      tag = document.createElement("meta");
+      tag.setAttribute(attr, prop);
+      document.head.appendChild(tag);
+    }
+    tag.setAttribute("content", content);
+  }
+
+  // JSON-LD structured data (BlogPosting)
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": post.title,
+    "description": post.excerpt || "",
+    "datePublished": post.date,
+    "url": canonicalUrl,
+    "publisher": {
+      "@type": "Organization",
+      "name": "Claude Code Free Materials Blog",
+      "url": "https://claudecodefree.com"
+    }
+  };
+  let ldScript = document.getElementById("ld-json");
+  if (!ldScript) {
+    ldScript = document.createElement("script");
+    ldScript.id = "ld-json";
+    ldScript.type = "application/ld+json";
+    document.head.appendChild(ldScript);
+  }
+  ldScript.textContent = JSON.stringify(jsonLd);
+
   // Re-fire page_view so GA records the real post title, not the loading-state title
   if (typeof gtag === "function") {
     gtag("event", "page_view", {
