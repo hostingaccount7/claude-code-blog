@@ -1,0 +1,133 @@
+<p>
+  Claude Code has a set of built-in slash commands and keyboard shortcuts that most beginners never discover.
+  Knowing them makes your sessions faster, cleaner, and easier to control. This is a reference you can come back
+  to any time.
+</p>
+
+<h2>Starting and stopping</h2>
+
+<h3><code>claude</code></h3>
+<p>Starts an interactive Claude Code session in your current folder. Claude Code can read and edit any file in that directory.</p>
+<pre><code>cd my-project
+claude</code></pre>
+
+<h3><code>claude "your prompt here"</code></h3>
+<p>
+  Runs a single prompt non-interactively and exits. Useful for quick one-off tasks from a script or terminal
+  without entering an interactive session.
+</p>
+<pre><code>claude "explain what app.js does in one paragraph"</code></pre>
+
+<h3><code>exit</code> or <kbd>Ctrl</kbd>+<kbd>C</kbd></h3>
+<p>Ends the current session. Your files are unchanged; only the conversation ends.</p>
+
+<h2>Conversation control</h2>
+
+<h3><code>/clear</code></h3>
+<p>
+  Wipes the entire conversation history in the current session without touching your files. Use it when a
+  back-and-forth has gone off-track and you want to refocus with a clean prompt.
+</p>
+<pre><code>/clear</code></pre>
+
+<h3><code>/compact</code></h3>
+<p>
+  Summarises the conversation so far into a shorter form to free up context space. Unlike <code>/clear</code>,
+  it preserves a compressed memory of what was discussed. Use it in long sessions before context runs out.
+</p>
+<pre><code>/compact</code></pre>
+
+<h3><kbd>Ctrl</kbd>+<kbd>C</kbd> during a response</h3>
+<p>
+  Interrupts Claude Code mid-response. If a response is going in the wrong direction or is taking too long,
+  press this to stop it and rephrase your prompt.
+</p>
+
+<h2>File and code operations</h2>
+
+<h3><code>/add &lt;file&gt;</code></h3>
+<p>
+  Explicitly adds a file to Claude Code's context so it can read and edit it. Useful when you want to be precise
+  about which files are in scope.
+</p>
+<pre><code>/add src/auth.py</code></pre>
+
+<h3>Referring to files in prompts</h3>
+<p>
+  You don't always need <code>/add</code>. Mentioning a filename in your prompt often causes Claude Code to read
+  it automatically. Be explicit when the file is large or in a nested folder:
+</p>
+<pre><code>Look at src/utils/format.py and explain the formatDate function.</code></pre>
+
+<h2>Information and help</h2>
+
+<h3><code>/help</code></h3>
+<p>Shows all available commands with a short description. Run this any time you forget a command name.</p>
+<pre><code>/help</code></pre>
+
+<h3><code>/status</code></h3>
+<p>
+  Shows current session information: how much context has been used, which model is running, and other session
+  details. Check this in a long session to see how much context budget remains.
+</p>
+<pre><code>/status</code></pre>
+
+<h3><code>claude --version</code></h3>
+<p>Prints the installed version. Run this outside a session to confirm Claude Code is installed correctly.</p>
+<pre><code>claude --version</code></pre>
+
+<h3><code>claude --help</code></h3>
+<p>Lists all command-line flags and options. Useful for flags like <code>--model</code> or <code>--print</code>.</p>
+
+<h2>Model selection</h2>
+
+<h3><code>claude --model &lt;model-id&gt;</code></h3>
+<p>
+  Starts a session with a specific Claude model. Useful if you want to use a faster or more powerful model than
+  the default for a particular task.
+</p>
+<pre><code>claude --model claude-haiku-4-5-20251001</code></pre>
+
+<h2>Memory and project configuration</h2>
+
+<h3><code>CLAUDE.md</code></h3>
+<p>
+  Not a command, but the most important file to know about. Place a file called <code>CLAUDE.md</code> in your
+  project root. Claude Code reads it automatically at the start of every session. Use it to set project
+  conventions, technology choices, and rules so you don't repeat them every time.
+</p>
+<pre><code># CLAUDE.md example
+Language: Python 3.11
+Style: snake_case, 88-char line limit
+Don't modify tests unless I ask.
+Always explain changes before making them.</code></pre>
+<p>
+  See the <a href="./post.html?post=saving-context-tokens">context tokens guide</a> for more on how CLAUDE.md
+  saves you token budget.
+</p>
+
+<h2>Keyboard shortcuts at a glance</h2>
+<ul>
+  <li><kbd>↑</kbd> / <kbd>↓</kbd> — scroll through previous prompts in the current session.</li>
+  <li><kbd>Ctrl</kbd>+<kbd>C</kbd> — interrupt a running response.</li>
+  <li><kbd>Ctrl</kbd>+<kbd>L</kbd> — clear the terminal display (does not clear conversation history; use <code>/clear</code> for that).</li>
+  <li><kbd>Tab</kbd> — autocomplete file paths when typing them in prompts.</li>
+</ul>
+
+<h2>Full command quick-reference</h2>
+<ul>
+  <li><code>claude</code> — start an interactive session</li>
+  <li><code>claude "prompt"</code> — run one prompt and exit</li>
+  <li><code>claude --version</code> — check installed version</li>
+  <li><code>claude --help</code> — list all CLI flags</li>
+  <li><code>/help</code> — list all in-session commands</li>
+  <li><code>/clear</code> — wipe conversation history</li>
+  <li><code>/compact</code> — summarise history to save context</li>
+  <li><code>/add &lt;file&gt;</code> — add a file to context</li>
+  <li><code>/status</code> — show session and context info</li>
+</ul>
+
+<p class="muted">
+  For how to use these commands to manage long sessions efficiently, see
+  <a href="./post.html?post=saving-context-tokens">Saving Claude Code context tokens</a>.
+</p>

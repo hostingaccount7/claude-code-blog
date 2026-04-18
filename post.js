@@ -91,6 +91,18 @@ async function main() {
   metaEl.innerHTML = renderMeta(post);
   document.title = `${post.title} • Claude Code Free Materials Blog`;
 
+  // Update meta description with post excerpt for GA and social sharing
+  const descMeta = document.querySelector('meta[name="description"]');
+  if (descMeta && post.excerpt) descMeta.setAttribute("content", post.excerpt);
+
+  // Re-fire page_view so GA records the real post title, not the loading-state title
+  if (typeof gtag === "function") {
+    gtag("event", "page_view", {
+      page_title: document.title,
+      page_location: window.location.href,
+    });
+  }
+
   try {
     const html = await loadPostHtml(slug);
     contentEl.innerHTML = html;

@@ -1,0 +1,101 @@
+<h2>Why git matters when you use Claude Code</h2>
+<p>
+  Claude Code can write and change files quickly. That power is only safe when you can <strong>undo mistakes</strong>
+  and <strong>see exactly what changed</strong>. Git gives you both. This guide covers the five commands you need
+  every day—nothing more.
+</p>
+
+<h2>What git actually does</h2>
+<p>
+  Think of git as a photo album for your project. Every time you run <code>git commit</code>, you take a snapshot of
+  your files. If something breaks later, you flip back to an earlier photo. Claude Code generates changes fast, so
+  taking snapshots often is the safest habit you can build.
+</p>
+
+<h2>Set up git once</h2>
+<pre><code>git config --global user.name "Your Name"
+git config --global user.email "you@example.com"</code></pre>
+<p>You only need to do this one time per computer. Then, inside any project folder:</p>
+<pre><code>git init</code></pre>
+
+<h2>The five commands you need daily</h2>
+
+<h3>1. Check what changed</h3>
+<pre><code>git status</code></pre>
+<p>
+  Run this <em>before and after</em> every Claude Code session. It shows which files were added, changed, or deleted.
+  Read it carefully—it only takes a few seconds and prevents surprises.
+</p>
+
+<h3>2. See the actual changes</h3>
+<pre><code>git diff</code></pre>
+<p>
+  Shows the line-by-line differences. Lines starting with <code>+</code> were added; lines starting with
+  <code>-</code> were removed. Read this before committing so you know exactly what Claude Code changed.
+</p>
+
+<h3>3. Stage files for a snapshot</h3>
+<pre><code>git add filename.py
+# or stage everything changed:
+git add .</code></pre>
+<p>
+  Staging means "include this in the next snapshot." Use <code>git add .</code> when you trust all the changes shown
+  by <code>git diff</code>.
+</p>
+
+<h3>4. Take the snapshot (commit)</h3>
+<pre><code>git commit -m "Add login function"</code></pre>
+<p>
+  Write a short message describing <em>what</em> you did, not <em>how</em>. Bad: <code>"changes"</code>.
+  Good: <code>"Fix off-by-one error in score counter"</code>.
+</p>
+
+<h3>5. View your snapshot history</h3>
+<pre><code>git log --oneline</code></pre>
+<p>Shows a compact list of all your commits. Each line has a short ID and your message.</p>
+
+<h2>Undo the last commit (safely)</h2>
+<p>If you committed something wrong and <strong>haven't shared it yet</strong>:</p>
+<pre><code>git reset HEAD~1</code></pre>
+<p>
+  This un-commits the last snapshot but keeps your files unchanged. You can then fix things and commit again.
+</p>
+
+<h2>A safe workflow with Claude Code</h2>
+<ol>
+  <li>Before asking Claude Code to change anything: <code>git status</code> → confirm you are starting clean.</li>
+  <li>Ask Claude Code to make one small change.</li>
+  <li>Run <code>git diff</code> and read what changed.</li>
+  <li>Test the change manually (run the program, open the file, check the output).</li>
+  <li>If it looks good: <code>git add .</code> then <code>git commit -m "short message"</code>.</li>
+  <li>If it's wrong: fix it or ask Claude Code to revert, then commit again.</li>
+</ol>
+<p>
+  Small commits protect you. If step 5 of a 20-step session breaks something, you only need to undo one commit,
+  not redo everything from scratch.
+</p>
+
+<h2>Quick reference card</h2>
+<ul>
+  <li><code>git status</code> — what's changed right now?</li>
+  <li><code>git diff</code> — show me the exact changes</li>
+  <li><code>git add .</code> — stage all changes</li>
+  <li><code>git commit -m "message"</code> — take a snapshot</li>
+  <li><code>git log --oneline</code> — see all snapshots</li>
+  <li><code>git reset HEAD~1</code> — undo the last snapshot (keep files)</li>
+</ul>
+
+<h2>Practice exercise</h2>
+<ol>
+  <li>Create a new folder and run <code>git init</code> inside it.</li>
+  <li>Create a file called <code>notes.txt</code> and write one sentence in it.</li>
+  <li>Run <code>git add .</code> and <code>git commit -m "Add notes file"</code>.</li>
+  <li>Open <code>notes.txt</code>, add a second sentence, save it.</li>
+  <li>Run <code>git diff</code> — you should see your new sentence with a <code>+</code> in front.</li>
+  <li>Commit again with <code>git commit -m "Add second note"</code>.</li>
+  <li>Run <code>git log --oneline</code> — you should see both commits.</li>
+</ol>
+<p>
+  Once this feels natural, you are ready to use Claude Code on real projects with confidence that you can always
+  go back.
+</p>

@@ -1,0 +1,150 @@
+<h2>What you'll build</h2>
+<p>
+  A command-line quiz program: you give it questions and correct answers, it quizzes you, and it tells you your
+  score at the end. The complete program is about 40 lines of Python—simple enough to understand every line,
+  real enough to be genuinely useful.
+</p>
+<p>
+  You will use Claude Code as a collaborator, not as someone who types for you. That means planning first,
+  prompting one step at a time, and reading everything before you accept it.
+</p>
+
+<h2>Before you start: check your tools</h2>
+<pre><code># Confirm Python is installed
+python --version   # or python3 --version
+
+# Confirm Claude Code is running
+claude --version</code></pre>
+<p>
+  If either command fails, see the
+  <a href="./post.html?post=claude-code-cli-basics">CLI basics guide</a> for setup steps.
+</p>
+
+<h2>Step 1: Create the project folder</h2>
+<pre><code>mkdir quiz-app
+cd quiz-app
+git init</code></pre>
+<p>
+  Start git immediately. You will commit after each working step so you can always go back.
+</p>
+
+<h2>Step 2: Plan before prompting</h2>
+<p>
+  Write your plan in a file called <code>plan.txt</code> before opening Claude Code. It can be rough:
+</p>
+<pre><code>Quiz program plan
+-----------------
+- Store questions as a list of dictionaries: {question, answer}
+- Loop through questions and ask user for input
+- Compare input to answer (case-insensitive)
+- Count correct answers
+- Print final score at the end</code></pre>
+<p>
+  Having a written plan means your prompts will be specific. Specific prompts produce smaller, easier-to-review
+  suggestions.
+</p>
+
+<h2>Step 3: Start Claude Code and open your project</h2>
+<pre><code>claude</code></pre>
+<p>Claude Code will start in your current folder (<code>quiz-app</code>).</p>
+
+<h2>Step 4: Prompt one piece at a time</h2>
+<p>Do <strong>not</strong> paste your whole plan and ask for the finished program. Instead:</p>
+
+<h3>First prompt</h3>
+<blockquote>
+  <p>
+    Create a file called quiz.py. Add a Python list called QUESTIONS. Each item should be a dictionary with two
+    keys: "question" and "answer". Add three example questions about basic Python syntax. Don't add anything else yet.
+  </p>
+</blockquote>
+<p>
+  Read the suggestion. Does it look like a list of dictionaries? Are the example questions sensible? If yes, accept
+  it and commit:
+</p>
+<pre><code>git add quiz.py
+git commit -m "Add questions list"</code></pre>
+
+<h3>Second prompt</h3>
+<blockquote>
+  <p>
+    Add a function called run_quiz that loops through QUESTIONS, prints each question, reads the user's answer with
+    input(), and compares it to the correct answer. The comparison should ignore uppercase and lowercase. Count correct
+    answers in a variable called score. Don't print the score yet.
+  </p>
+</blockquote>
+<p>
+  Read the function. Trace it by hand: what happens on the first question? The second? Does <code>score</code> start
+  at zero? Commit if it's correct.
+</p>
+
+<h3>Third prompt</h3>
+<blockquote>
+  <p>
+    After the loop ends, print the user's score out of the total number of questions. Then add an if __name__ ==
+    "__main__": block that calls run_quiz(). Don't change anything else.
+  </p>
+</blockquote>
+
+<h2>Step 5: Run it and test by hand</h2>
+<pre><code>python quiz.py</code></pre>
+<p>
+  Answer the questions deliberately: get one right on purpose, one wrong on purpose. Check that the final score
+  matches what you expected. This is your manual test—always do it before committing a feature.
+</p>
+
+<h2>Step 6: Extend it yourself</h2>
+<p>
+  Now that the core works, try adding features with one prompt each. Do them one at a time:
+</p>
+<ul>
+  <li>Shuffle the question order using Python's <code>random</code> module.</li>
+  <li>Add a time limit: if the user takes more than 10 seconds, mark the question wrong.</li>
+  <li>Load questions from a text file instead of the hard-coded list.</li>
+  <li>Keep a high-score record in a file so the user can try to beat their own record.</li>
+</ul>
+<p>
+  Each of these is one prompt and one commit. If a feature breaks the program, you have a clean commit to revert to.
+</p>
+
+<h2>What you learned by doing this</h2>
+<ul>
+  <li>Planning before prompting produces smaller, clearer changes.</li>
+  <li>Committing after each working step means mistakes are always reversible.</li>
+  <li>Testing by hand—not just running without errors—catches logic mistakes that Claude Code cannot see.</li>
+  <li>Extending one feature at a time keeps the code understandable.</li>
+</ul>
+<p>
+  These habits work for 40-line programs and for 40,000-line programs. The scale changes; the habits do not.
+</p>
+
+<h2>The finished program (for reference)</h2>
+<pre><code>import random
+
+QUESTIONS = [
+    {"question": "What keyword defines a function in Python?", "answer": "def"},
+    {"question": "What is the output of len('hello')?", "answer": "5"},
+    {"question": "Which method adds an item to a list?", "answer": "append"},
+]
+
+def run_quiz():
+    questions = QUESTIONS[:]
+    random.shuffle(questions)
+    score = 0
+
+    for item in questions:
+        user = input(item["question"] + " ").strip().lower()
+        correct = item["answer"].strip().lower()
+        if user == correct:
+            print("Correct!")
+            score += 1
+        else:
+            print(f"Wrong. The answer was: {item['answer']}")
+
+    print(f"\nYour score: {score}/{len(questions)}")
+
+if __name__ == "__main__":
+    run_quiz()</code></pre>
+<p>
+  Treat this as a reference, not a shortcut. The goal is to build it step by step so you understand every line.
+</p>

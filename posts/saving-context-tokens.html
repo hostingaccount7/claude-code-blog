@@ -1,0 +1,119 @@
+<p>
+  Every Claude Code session has a context window—a limit on how much text the model can hold in memory at once.
+  When you hit that limit, older parts of the conversation start getting dropped, responses can become less
+  accurate, and long sessions slow down. Learning to use context efficiently is one of the highest-leverage
+  habits you can build.
+</p>
+
+<h2>What uses context tokens?</h2>
+<p>
+  Everything in a session counts: your prompts, Claude's responses, every file that gets read, every diff that
+  gets shown, and the conversation history from the start of the session. Large files read in full, vague
+  back-and-forth, and repeated explanations are the biggest drains.
+</p>
+
+<h2>1. Start fresh sessions for new tasks</h2>
+<p>
+  A session that started with "fix the login bug" should not also be used to "add a new dashboard page." Each
+  task gets its own session. When a task is done, close the session and open a new one. You keep the full context
+  budget for each new task rather than starting with it half-spent.
+</p>
+<pre><code># End the current session
+exit
+
+# Start a fresh one for the next task
+claude</code></pre>
+
+<h2>2. Use <code>/clear</code> to reset mid-session</h2>
+<p>
+  If you are mid-session and the conversation has drifted into a long back-and-forth that is no longer relevant,
+  run <code>/clear</code>. This wipes the conversation history while keeping your files unchanged. You can then
+  re-focus with a single tight prompt.
+</p>
+<pre><code>/clear</code></pre>
+<p>
+  Use it when: you've been debugging and the conversation is full of failed attempts, or you asked several
+  exploratory questions and now want to switch to actually writing code.
+</p>
+
+<h2>3. Give Claude only the files it needs</h2>
+<p>
+  Avoid prompts like "look at all the files in this project." Instead, name the specific file:
+</p>
+<blockquote>
+  <p>Read only <code>auth.py</code>. Don't open any other files unless I ask.</p>
+</blockquote>
+<p>
+  Every file Claude reads consumes tokens. If you have a 2,000-line file but the bug is on line 47, say so:
+</p>
+<blockquote>
+  <p>In <code>utils.py</code>, look only at the <code>calculate_total</code> function around line 47.</p>
+</blockquote>
+
+<h2>4. Keep prompts short and specific</h2>
+<p>
+  Long preambles waste tokens. Compare:
+</p>
+<ul>
+  <li><strong>Wasteful:</strong> "Hi, I've been working on this project for a few weeks and I'm having some trouble with a function I wrote last Tuesday that is supposed to calculate the total price including tax…"</li>
+  <li><strong>Efficient:</strong> "In <code>cart.py</code>, the <code>calculate_total</code> function returns the wrong value when tax is 0. Fix it."</li>
+</ul>
+<p>
+  Background you already explained in this session doesn't need to be repeated. If you are starting fresh,
+  one sentence of context is usually enough.
+</p>
+
+<h2>5. Ask for compact responses when you don't need explanation</h2>
+<p>
+  By default Claude Code explains its reasoning. When you just want the output, say so:
+</p>
+<blockquote>
+  <p>Rename all instances of <code>getUserData</code> to <code>fetch_user_data</code> in <code>api.js</code>. Show me only the diff, no explanation.</p>
+</blockquote>
+<p>
+  Shorter responses mean more room in the context window for the actual work.
+</p>
+
+<h2>6. Use CLAUDE.md to avoid re-explaining your project</h2>
+<p>
+  If you find yourself typing the same background in every session ("this is a Flask app, we use PostgreSQL,
+  don't use f-strings"), put it in a <code>CLAUDE.md</code> file at the root of your project. Claude Code reads
+  this file automatically at the start of every session. One short, well-written file saves you dozens of
+  repeated prompt tokens across many sessions.
+</p>
+<pre><code># CLAUDE.md
+Language: Python 3.11
+Framework: Flask
+Database: PostgreSQL via psycopg2
+Style: snake_case, no f-strings, max line length 88</code></pre>
+
+<h2>7. Prefer <code>/compact</code> over letting context fill up silently</h2>
+<p>
+  When a session is getting long and you want to continue rather than start fresh, run:
+</p>
+<pre><code>/compact</code></pre>
+<p>
+  This asks Claude Code to summarise the conversation so far into a shorter form, freeing up space while
+  preserving the key facts. Use it when you notice responses starting to feel less precise or when the session
+  has been running for a long time.
+</p>
+
+<h2>Signs your context is running low</h2>
+<ul>
+  <li>Claude Code references something incorrectly that you discussed earlier in the session.</li>
+  <li>Responses start repeating suggestions you already rejected.</li>
+  <li>The model seems to forget constraints you set at the beginning ("I told you not to modify that file").</li>
+</ul>
+<p>
+  When you notice these signs, run <code>/compact</code> or start a new session and give one sentence of fresh context.
+</p>
+
+<h2>Quick reference</h2>
+<ul>
+  <li><strong>New task → new session.</strong> Don't share context budgets between unrelated tasks.</li>
+  <li><strong><code>/clear</code></strong> — wipe conversation history, keep files.</li>
+  <li><strong><code>/compact</code></strong> — summarise history to free up space.</li>
+  <li><strong>Name specific files</strong> instead of asking Claude to explore the whole project.</li>
+  <li><strong>CLAUDE.md</strong> — write project context once, not every session.</li>
+  <li><strong>Short prompts, short responses</strong> — ask for diffs, not explanations, when you just want the code.</li>
+</ul>

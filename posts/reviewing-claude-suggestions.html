@@ -1,0 +1,95 @@
+<h2>The biggest mistake beginners make</h2>
+<p>
+  When Claude Code suggests a change, the easiest thing to do is press <kbd>Accept</kbd> and move on. That feels
+  fast. But it means you are handing control of your project to something you haven't checked. Professionals
+  don't do this—not even with code written by experienced teammates. This guide teaches you how to review every
+  suggestion in under two minutes.
+</p>
+
+<h2>Why reviewing matters more than accepting</h2>
+<p>
+  Claude Code is very good at writing plausible code. "Plausible" is not the same as "correct for your situation."
+  The model does not know your teacher's requirements, your data, or what broke last week. You do. Reviewing is how
+  you apply that knowledge.
+</p>
+<p>
+  There is another reason: if you cannot explain the code you submit, you haven't learned anything. Reviewing forces
+  you to understand before you accept.
+</p>
+
+<h2>Step 1: Read before you run</h2>
+<p>
+  When Claude Code shows you a suggested change, pause. Read it top to bottom before clicking anything. Ask yourself:
+</p>
+<ul>
+  <li>What does this code <em>do</em>, in plain English?</li>
+  <li>Does it do the thing I actually asked for?</li>
+  <li>Are there any lines I don't recognise?</li>
+</ul>
+<p>
+  If you can't answer the first question, that is a signal to ask a follow-up: <em>"Can you explain this function
+  line by line?"</em>
+</p>
+
+<h2>Step 2: Check the scope of changes</h2>
+<p>
+  Did Claude Code change only the file you expected, or did it touch other files too? Run
+  <code>git diff</code> (or look at the diff view in your editor) to see every changed line across every file.
+  Changes outside the files you discussed should be examined closely—they may be fine, or they may be unintended.
+</p>
+
+<h2>Step 3: Test it yourself</h2>
+<p>
+  Do not rely on Claude Code's claim that "this should work." Run the code. Use a simple test case you can verify
+  by hand:
+</p>
+<ul>
+  <li>If it's a function, call it with known inputs and check the output.</li>
+  <li>If it's a web page, open it in a browser and click through the affected parts.</li>
+  <li>If it modifies data, check the data before and after.</li>
+</ul>
+<p>
+  If the output matches what you expected, accept the change. If not, that's your evidence for the next prompt.
+</p>
+
+<h2>Step 4: Ask about anything you don't understand</h2>
+<p>Good follow-up prompts for unclear suggestions:</p>
+<ul>
+  <li><em>"Why did you use a <code>while</code> loop here instead of a <code>for</code> loop?"</em></li>
+  <li><em>"What does <code>enumerate()</code> do in this context?"</em></li>
+  <li><em>"Is there a simpler way to write this that a beginner would recognise?"</em></li>
+</ul>
+<p>
+  Claude Code is not impatient. You can ask as many clarifying questions as you need. Every answer is a free lesson.
+</p>
+
+<h2>Step 5: Reject and rephrase when needed</h2>
+<p>
+  You are allowed to say no. If a suggestion feels too complex, too different from your existing code style, or
+  just wrong, reject it and try a more specific prompt:
+</p>
+<blockquote>
+  <p>
+    Instead of rewriting the whole function, just fix the part that calculates the total. Keep everything else the
+    same as it is now.
+  </p>
+</blockquote>
+<p>
+  Narrowing the scope makes the suggestion easier to review and less likely to introduce unrelated changes.
+</p>
+
+<h2>A two-minute review checklist</h2>
+<ul>
+  <li>Read the full suggestion before accepting anything.</li>
+  <li>Run <code>git diff</code> to see the exact changed lines.</li>
+  <li>Test with at least one input you can verify by hand.</li>
+  <li>Ask for an explanation of any line you don't understand.</li>
+  <li>If it changes more than you asked for, reject and rephrase.</li>
+</ul>
+
+<h2>Building the habit</h2>
+<p>
+  It feels slow at first. After a few weeks it becomes automatic—you will read diffs as naturally as you read text.
+  That skill transfers to every team you ever work on, every code review you receive, and every bug you have to
+  track down. Learning to review is one of the most valuable things you can take from your time with Claude Code.
+</p>

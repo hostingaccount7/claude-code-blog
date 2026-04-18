@@ -100,11 +100,19 @@ async function main() {
     meta.textContent = `${list.length} post${list.length === 1 ? "" : "s"} shown`;
   }
 
+  let searchTimer;
   function applyFilter() {
     const term = normalize(q.value);
     if (!term) return render(posts);
     const filtered = indexed.filter((x) => x.hay.includes(term)).map((x) => x.post);
     render(filtered);
+    // Track search in GA (debounced to avoid per-keystroke noise)
+    clearTimeout(searchTimer);
+    searchTimer = setTimeout(() => {
+      if (typeof gtag === "function") {
+        gtag("event", "search", { search_term: term });
+      }
+    }, 800);
   }
 
   q.addEventListener("input", applyFilter);

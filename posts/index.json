@@ -62,5 +62,45 @@
     "readingTime": "5 min read",
     "excerpt": "Techniques for reading unfamiliar code: ask for summaries, trace inputs, predict behavior, and find patterns you can reuse.",
     "tags": ["reading-code", "beginner", "study-skills"]
+  },
+  {
+    "slug": "git-basics-with-claude-code",
+    "title": "Git basics with Claude Code: commit, undo, and track your work",
+    "date": "2026-04-17",
+    "readingTime": "6 min read",
+    "excerpt": "The five git commands every Claude Code user needs daily—and a safe commit-after-every-change workflow that makes mistakes easy to undo.",
+    "tags": ["git", "beginner", "workflow"]
+  },
+  {
+    "slug": "reviewing-claude-suggestions",
+    "title": "How to review Claude Code suggestions without accepting blindly",
+    "date": "2026-04-17",
+    "readingTime": "5 min read",
+    "excerpt": "A two-minute checklist for reading diffs, testing changes by hand, and asking follow-up questions—so you understand every line you keep.",
+    "tags": ["review", "best-practices", "study-skills"]
+  },
+  {
+    "slug": "python-project-from-scratch",
+    "title": "Build a Python quiz app from scratch with Claude Code",
+    "date": "2026-04-17",
+    "readingTime": "7 min read",
+    "excerpt": "A step-by-step walkthrough: plan your program, prompt one piece at a time, test by hand, and commit after each working step.",
+    "tags": ["python", "project", "beginner"]
+  },
+  {
+    "slug": "saving-context-tokens",
+    "title": "How to save Claude Code context tokens and keep sessions sharp",
+    "date": "2026-04-17",
+    "readingTime": "6 min read",
+    "excerpt": "Practical habits for stretching your context budget: /clear, /compact, scoped file reads, tight prompts, and CLAUDE.md.",
+    "tags": ["context", "workflow", "best-practices"]
+  },
+  {
+    "slug": "key-claude-code-commands",
+    "title": "Key Claude Code commands every user should know",
+    "date": "2026-04-17",
+    "readingTime": "5 min read",
+    "excerpt": "A complete reference for slash commands, keyboard shortcuts, CLI flags, and CLAUDE.md—with examples for each.",
+    "tags": ["commands", "reference", "cli"]
   }
 ]
