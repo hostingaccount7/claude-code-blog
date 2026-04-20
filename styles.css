@@ -248,6 +248,25 @@ h3 { margin: 0; }
 }
 .cat-btn.active .cat-count { color: var(--dim-accent); }
 
+/* Featured category pill — save-context */
+.cat-btn--featured {
+  color: var(--bg);
+  background: var(--accent);
+  border-color: var(--accent);
+  font-weight: 700;
+}
+.cat-btn--featured:hover {
+  background: rgba(77,255,170,0.85);
+  border-color: var(--accent);
+  color: var(--bg);
+}
+.cat-btn--featured.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--bg);
+}
+.cat-btn--featured .cat-count { color: rgba(5,10,7,0.65); }
+
 /* ── Hero ─────────────────────────────────────────────────────── */
 .hero { padding: 72px 0 52px; margin-top: var(--offset); }
 

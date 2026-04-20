@@ -1,0 +1,71 @@
+<h2>Why the End of a Session Is Where Progress Dies</h2>
+
+<p>You've been coding for two hours. Things are finally clicking. Then class starts, the library closes, or your laptop battery dies — and you slam the lid shut. Next time you open Claude Code, you're staring at a blank terminal with no idea where you left off.</p>
+
+<p>This happens to almost every student. The fix isn't working faster — it's having a closing routine. Think of it like dimming the lights before sleep: you don't just collapse into bed, you wind down progressively so you wake up rested and ready. The same idea works for coding sessions.</p>
+
+<h2>The 5-Step Bedtime Routine</h2>
+
+<h3>Step 1: Commit Everything with Git</h3>
+
+<p>Before anything else, save your work at the code level. Even if the code is broken, commit it. A broken commit you can read is worth more than perfect code you've lost.</p>
+
+<pre><code>git add .
+git commit -m "WIP: added login form, validation not working yet"</code></pre>
+
+<p>The <code>WIP:</code> prefix is a convention that tells future-you (and collaborators) this isn't finished. Be specific in the message — "WIP: stuff" helps nobody.</p>
+
+<h3>Step 2: Ask Claude to Write a Fresh-Start Prompt</h3>
+
+<p>This is the most underused trick in the book. Before you close the session, ask Claude to summarise everything into a single prompt you can paste at the start of your next session. Claude knows the full context — let it do the remembering for you.</p>
+
+<p>Paste this request at the end of your session:</p>
+
+<pre><code>We're about to end this session. Please write me a fresh-start prompt —
+a single message I can paste at the start of my next Claude Code session
+to resume exactly where we left off. Include: what we were building,
+what we just tried, what broke, what the next step is, and any important
+file names or decisions we made. Keep it under 200 words.</code></pre>
+
+<p>Copy Claude's response into a notes file or your clipboard manager. That's your golden ticket for next time.</p>
+
+<h3>Step 3: Run /compact</h3>
+
+<p>Type <code>/compact</code> in the Claude Code terminal. This compresses the conversation history into a condensed summary, freeing up token space. If you're coming back to the same session later (rather than starting fresh), this means Claude will have more room to think when you return.</p>
+
+<p>Think of it as tidying your desk before you leave — less clutter to navigate tomorrow.</p>
+
+<h3>Step 4: Write Three Bullets in Your Notes</h3>
+
+<p>Open <code>CLAUDE.md</code> or a plain notes file and write exactly three bullets before you close anything:</p>
+
+<ul>
+  <li><strong>Done:</strong> what actually got finished this session</li>
+  <li><strong>Broke:</strong> what's currently not working (be honest)</li>
+  <li><strong>Next:</strong> the single first thing to do next session</li>
+</ul>
+
+<p>Three bullets takes under two minutes and saves you fifteen minutes of confused re-orientation next time.</p>
+
+<h3>Step 5: Type exit and Close the Terminal</h3>
+
+<p>Type <code>exit</code> in the terminal and close it deliberately. Don't just X the window mid-thought. The act of typing <code>exit</code> is a small ritual that signals to your brain — and to your session — that things are properly wrapped up.</p>
+
+<h2>Why This Helps Your Token Budget Next Session</h2>
+
+<p>When you start a new Claude Code session with a focused fresh-start prompt (from Step 2), you're giving Claude exactly the context it needs — no more, no less. A bloated session history full of dead ends and repeated questions burns through your token budget before you've written a line of new code. Starting lean means Claude can go further before it needs to compact or forget earlier parts of the conversation. For more on managing this, see <a href="./post.html?post=saving-context-tokens">Saving Context Tokens</a>.</p>
+
+<h2>Quick Checklist</h2>
+
+<blockquote>
+  <p>Run through this before every session ends:</p>
+  <ol>
+    <li>Committed all changes with a descriptive <code>WIP:</code> message</li>
+    <li>Asked Claude for a fresh-start prompt and saved it</li>
+    <li>Ran <code>/compact</code> to tidy the conversation memory</li>
+    <li>Written three bullets (done / broke / next) in your notes</li>
+    <li>Typed <code>exit</code> and closed the terminal cleanly</li>
+  </ol>
+</blockquote>
+
+<p>Five steps, maybe five minutes. You'll thank yourself every single time you sit back down.</p>

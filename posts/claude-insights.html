@@ -1,0 +1,89 @@
+<h2>Understanding <code>/insights</code>: Read Your Session Stats and Work Smarter</h2>
+
+<p>Claude Code gives you a built-in dashboard for your current session. The command is called <code>/insights</code>, and it shows you exactly how much of your context window you have left, how many turns you have taken, and which model is doing the work. Once you know how to read it, you can make smart decisions before you run into problems.</p>
+
+<h2>How to Run It</h2>
+
+<p>Type this at any point during your session:</p>
+
+<pre><code>/insights</code></pre>
+
+<p>You will see output that looks something like this:</p>
+
+<pre><code>Session Insights
+────────────────────────────────
+Tokens used:        42,318
+Context window:     33%
+Turns:              14
+Model:              claude-sonnet-4-5
+────────────────────────────────</code></pre>
+
+<p>If your version of Claude Code does not show <code>/insights</code>, try <code>/status</code> instead — it covers similar ground.</p>
+
+<h2>How to Read the Output</h2>
+
+<h3>Tokens used</h3>
+<p>This is the running total of tokens consumed in your session — your messages, Claude's replies, and any file contents that were read. Think of it as a fuel gauge for the conversation so far.</p>
+
+<h3>Context window percentage</h3>
+<p>This tells you how full the context window is. The context window is the maximum amount of text Claude can hold in memory at once. When it fills up, older parts of the conversation get dropped, and Claude may lose track of earlier work.</p>
+
+<h3>Turns</h3>
+<p>One turn is one message from you plus one reply from Claude. This number helps you gauge how long and complex the session has become.</p>
+
+<h3>Model</h3>
+<p>Shows which Claude model is handling your session. Useful to confirm you are on the model you expect.</p>
+
+<h2>Three Ways to Act on What You See</h2>
+
+<ol>
+  <li><strong>Context percentage above 60%? Run <code>/compact</code> now.</strong> Do not wait until it hits 90%. Running <code>/compact</code> early summarises the conversation and frees up space before anything important gets dropped.</li>
+  <li><strong>High turn count but little progress? Start a fresh session.</strong> Long, tangled sessions often slow Claude down. If you have taken 30+ turns and feel like you are going in circles, close and reopen with a cleaner, focused prompt.</li>
+  <li><strong>Tokens spiking faster than expected? You are reading too many large files.</strong> Ask Claude to look at specific functions or line ranges instead of entire files. Every file read costs tokens, so being precise goes a long way.</li>
+</ol>
+
+<h2><code>/insights</code> vs <code>/status</code></h2>
+
+<p><code>/insights</code> is focused on session analytics — it is the command to reach for when you want numbers about your usage. <code>/status</code> tends to show broader information about the current task state, active files, and what Claude is working on. Use <code>/insights</code> to monitor your token budget, and <code>/status</code> to check what Claude thinks it is doing right now.</p>
+
+<h2>Quick-Reference Table</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Field</th>
+      <th>What it means</th>
+      <th>Action if it looks high</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Tokens used</td>
+      <td>Total tokens consumed this session</td>
+      <td>Be more targeted with file reads</td>
+    </tr>
+    <tr>
+      <td>Context window %</td>
+      <td>How full the context window is</td>
+      <td>Run <code>/compact</code> above 60%</td>
+    </tr>
+    <tr>
+      <td>Turns</td>
+      <td>Number of back-and-forth exchanges</td>
+      <td>Consider a fresh session above 30</td>
+    </tr>
+    <tr>
+      <td>Model</td>
+      <td>Which Claude model is active</td>
+      <td>No action needed — just for awareness</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Build the Habit: Check Every 10 Turns</h2>
+
+<blockquote>
+  Every 10 turns, pause and type <code>/insights</code>. It takes two seconds and tells you whether you are still in good shape or whether it is time to compact or reset. Catching a full context window early is far easier than recovering from one that has already overflowed.
+</blockquote>
+
+<p>Want to go deeper? See <a href="./post.html?post=saving-context-tokens">Saving Context Tokens in Claude Code</a> for practical techniques to stretch your context window further, and <a href="./post.html?post=key-claude-code-commands">Key Claude Code Commands Every Student Should Know</a> for a full overview of the most useful built-in commands.</p>

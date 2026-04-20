@@ -44,13 +44,14 @@ Internal links inside post HTML use `./post.html?post=<slug>` (no `.html` in the
 
 Posts have a `category` field in `index.json`. Valid values:
 
-| id         | label           |
-|------------|-----------------|
-| `start`    | getting-started |
-| `skills`   | core-skills     |
-| `projects` | projects        |
-| `workflow` | workflow        |
-| `students` | students        |
+| id         | label           | notes                          |
+|------------|-----------------|--------------------------------|
+| `context`  | save-context    | **Featured** — shown first, filled accent pill |
+| `start`    | getting-started |                                |
+| `skills`   | core-skills     |                                |
+| `projects` | projects        |                                |
+| `workflow` | workflow        |                                |
+| `students` | students        |                                |
 
 The category filter bar on the home page uses these IDs. URL hash routing: `/#workflow` filters to workflow posts.
 

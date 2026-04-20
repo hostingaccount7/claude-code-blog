@@ -2,6 +2,7 @@ const POSTS_INDEX_URL = "./posts/index.json";
 
 const CATEGORIES = [
   { id: "all",      label: "all",              match: () => true },
+  { id: "context",  label: "save-context",     match: p => p.category === "context" },
   { id: "start",    label: "getting-started",  match: p => p.category === "start" },
   { id: "skills",   label: "core-skills",      match: p => p.category === "skills" },
   { id: "projects", label: "projects",         match: p => p.category === "projects" },

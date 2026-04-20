@@ -105,7 +105,7 @@
     "readingTime": "6 min read",
     "excerpt": "Practical habits for stretching your context budget: /clear, /compact, scoped file reads, tight prompts, and CLAUDE.md.",
     "tags": ["context", "workflow", "best-practices"],
-    "category": "workflow"
+    "category": "context"
   },
   {
     "slug": "key-claude-code-commands",
@@ -114,6 +114,24 @@
     "readingTime": "5 min read",
     "excerpt": "A complete reference for slash commands, keyboard shortcuts, CLI flags, and CLAUDE.md—with examples for each.",
     "tags": ["commands", "reference", "cli"],
-    "category": "workflow"
+    "category": "context"
+  },
+  {
+    "slug": "claude-insights",
+    "title": "Understanding /insights: read your session stats and work smarter",
+    "date": "2026-04-18",
+    "readingTime": "5 min read",
+    "excerpt": "What the /insights command shows, how to read each field, and three actions to take before your context window fills up.",
+    "tags": ["context", "commands", "workflow", "beginner"],
+    "category": "context"
+  },
+  {
+    "slug": "bedtime-workflow",
+    "title": "The Bedtime Workflow: End Every Claude Code Session Without Losing Progress",
+    "date": "2026-04-18",
+    "readingTime": "5 min read",
+    "excerpt": "A 5-step end-of-session routine for students: commit, save a fresh-start prompt, compact memory, write three bullets, and close cleanly.",
+    "tags": ["workflow", "students", "git", "context"],
+    "category": "context"
   }
 ]
